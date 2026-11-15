@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ContentDNA</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>ContentDNA 🧬</h1>
+    <p class="subtitle">Register your creative work on the blockchain. Only its fingerprint is stored, never the file.</p>
+
+    <button id="connectBtn">Connect to Ganache</button>
+    <p id="status">Not connected</p>
+    <p>Total registered: <span id="total">-</span></p>
+
+    <section>
+      <h2>1. Pick a file</h2>
+      <input type="file" id="fileInput" />
+      <p>Fingerprint (SHA-256): <code id="fingerprint">none yet</code></p>
+    </section>
+
+    <section>
+      <h2>2. Register it</h2>
+      <input type="text" id="titleInput" placeholder="Title, e.g. Sunset crochet bag" />
+      <button id="registerBtn">Register</button>
+    </section>
+
+    <section>
+      <h2>3. Check a file</h2>
+      <button id="checkBtn">Check if registered</button>
+      <p id="checkResult"></p>
+    </section>
+
+    <section>
+      <h2>4. Transfer ownership</h2>
+      <input type="text" id="newOwnerInput" placeholder="New owner address (0x...)" />
+      <button id="transferBtn">Transfer</button>
+    </section>
+
+    <p id="message"></p>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
